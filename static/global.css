@@ -31,6 +31,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
+    color: white;
+
     z-index: 10;
     padding: 0px 8%;
     display: flex;
@@ -52,15 +54,17 @@ body {
     transition: 200ms;
 }
 
-.scrolled {
+.navbar.scrolled {
+    color: black;
+}
+
+.scrolled .nav-bg-color {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     /* background-image: none; */
     opacity: 1;
     color: black;
     /* transition: 200ms; */
 }
-
-
 
 .nav-cluster {
     display: flex;
@@ -109,6 +113,10 @@ body {
 }
 
 .hov-link:hover {
+    border-color: white;
+}
+
+.navbar.scrolled .hov-link:hover {
     border-color: black;
 }
 

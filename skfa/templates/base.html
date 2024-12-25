@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="nav-bg-color" id="nav-bg-color"></div>
             <div class="nav-item">
                 <span class="dancing-script"><a href="/" class="hov-link nav-title">Susan Kilmartin Fine Art</a></span>
@@ -46,15 +46,15 @@
     </body>
 
     <script>
-        const header = document.getElementById('nav-bg-color');
+        const nav_bg = document.getElementById('navbar');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY === 0) {
                 // If at the top of the page
-                header.classList.remove('scrolled');
+                nav_bg.classList.remove('scrolled');
             } else {
                 // If scrolled down
-                header.classList.add('scrolled');
+                nav_bg.classList.add('scrolled');
             }
         });
     </script>
