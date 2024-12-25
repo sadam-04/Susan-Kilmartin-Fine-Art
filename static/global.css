@@ -9,25 +9,68 @@ body {
     min-height: 100vh;
 }
 
+.nav-title {
+    display: flex;
+    font-size: 250%;
+    margin: 15px 15px;
+    /* height: 900px; */
+}
+
 .navbar {
     position: sticky;
     top: 0;
-    background-color: white;
-    z-index: 10 !important;
+    box-shadow: none;
+    /* height: 10vh; */
+    height: fit-content;
+
+    /* background-image: url("{% static 'transparent.png' %}"); */
+    /* background-color: blue; */
+    background-image: url("home-landing-bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 10;
     padding: 0px 8%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
+    /* transition: 2000ms; */
 }
+
+.nav-bg-color {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    color: white;
+
+    transition: 200ms;
+}
+
+.scrolled {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* background-image: none; */
+    opacity: 1;
+    color: black;
+    /* transition: 200ms; */
+}
+
+
 
 .nav-cluster {
     display: flex;
-    font-size: 125%;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .nav-item {
     margin: auto 0;
+    z-index: 10;
 }
 
 .nav-cluster .nav-item {
@@ -43,7 +86,7 @@ body {
 
 /* footer block */
 .footer {
-    color: white;
+    color: black;
     margin: auto;
     margin-bottom: 5px;
 }
@@ -67,4 +110,13 @@ body {
 
 .hov-link:hover {
     border-color: black;
+}
+
+.parallax {
+    height: 100vh;
+    background-image: url("home-landing-bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -21,8 +21,9 @@
 
     <body>
         <div class="navbar">
+            <div class="nav-bg-color" id="nav-bg-color"></div>
             <div class="nav-item">
-                <h1 class="dancing-script"><a href="/" class="hov-link">Susan Kilmartin Fine Art</a></h1>
+                <span class="dancing-script"><a href="/" class="hov-link nav-title">Susan Kilmartin Fine Art</a></span>
             </div>
             <div class="nav-cluster">
                 <div class="nav-item">
@@ -40,7 +41,24 @@
         </div>
 
         <div class="footer">
-            <a href="https://github.com/sadam-04/brendan-www" class="link-dot">Copyright &#x00a9; 2024 Brendan Saich and Adam Saich</a>
+            <a href="https://github.com/sadam-04/Susan-Kilmartin-Fine-Art" class="hov-link">Copyright &#x00a9; 2024 Adam Saich</a>
         </div>
     </body>
+
+    <script>
+        const header = document.getElementById('nav-bg-color');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY === 0) {
+                // If at the top of the page
+                header.classList.remove('scrolled');
+            } else {
+                // If scrolled down
+                header.classList.add('scrolled');
+            }
+        });
+    </script>
+
+    {% block script %}
+    {% endblock %}
 </html>
