@@ -3,10 +3,78 @@
 {% load static %}
 
 {% block style %}
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        flex: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+</style>
 {% endblock %}
 
-
+{% block nav-classes %}nav-dol nav-shadow{% endblock %}
 
 {% block content %}
+<span class="section-title header-1 serif">Portraits<hr width="50%"></span>
+<!-- <hr> -->
+<div class="row">
+    <div class="column">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+    </div>
+    <div class="column">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+        <img src="{% static 'down.png' %}" style="width: 100%;">
+
+
+    </div>
+    <div class="column">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+
+
+    </div>
+    <div class="column">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+        <img src="{% static 'down.png' %}">
+
+
+    </div>
+</div>
 {% endblock %}
 

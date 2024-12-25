@@ -5,3 +5,6 @@ def homepage(request):
 
 def portfolio(request):
     return render(request, "templates/portfolio.html")
+
+def about(request):
+    return render(request, "templates/about.html")
