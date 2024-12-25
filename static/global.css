@@ -1,12 +1,78 @@
-body {
-    padding: 0 0;
-    margin: 0 0;
 
-    display: flex;
-    flex-direction: column;
+
+body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+}
+
+.header-1 {
+    font-size: 275%;
+}
+
+.para {
+    font-size: 100%;
+}
+
+/* font classes */
+.dancing-script {
+    font-family: "Dancing Script", serif;
+}
+
+.serif {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+}
+
+.serif-heavy {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.nserif {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+}
+
+.nserif-light {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+}
+
+.nserif-heavy {
+    font-family: "Roboto", serif;
+    font-weight: 600;
+}
+
+
+.bttn {
+    display: flex;
+    border-radius: 100px;
+    padding: 15px;
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    transition: 200ms;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    width: fit-content;
+}
+
+.bttn:hover {
+    color: black;
+    background-color: white;
+    /* border: 1px solid black;  */
+}
+
+.nav-lod {
+    color: white;
+    background-color: black;
+}
+
+.nav-dol {
+    color: black;
+    background-color: white;
 }
 
 .nav-title {
@@ -25,13 +91,13 @@ body {
 
     /* background-image: url("{% static 'transparent.png' %}"); */
     /* background-color: blue; */
-    background-image: url("home-landing-bg.png");
+    /* background-image: url("bg-cropped.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
-    color: white;
+    /* color: white; */
 
     z-index: 10;
     padding: 0px 8%;
@@ -41,7 +107,7 @@ body {
 }
 
 .nav-bg-color {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 0;
     left: 0;
@@ -54,17 +120,9 @@ body {
     transition: 200ms;
 }
 
-.navbar.scrolled {
-    color: black;
-}
 
-.scrolled .nav-bg-color {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* background-image: none; */
-    opacity: 1;
-    color: black;
-    /* transition: 200ms; */
-}
+
+
 
 .nav-cluster {
     display: flex;
@@ -85,23 +143,18 @@ body {
 /* content block */
 .content {
     position: relative;
+    flex: 1;
     z-index: 1;
 }
 
 /* footer block */
 .footer {
-    color: black;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
     margin: auto;
-    margin-bottom: 5px;
-}
-
-/* font classes */
-.dancing-script {
-    font-family: "Dancing Script", serif;
-}
-
-.roboto {
-    font-family: "Roboto", serif;
+    bottom: 0;
 }
 
 /* hover effect for clickable items/links */
@@ -112,19 +165,64 @@ body {
     transition: 200ms;
 }
 
+
 .hov-link:hover {
-    border-color: white;
+    border-color: inherit;
 }
 
-.navbar.scrolled .hov-link:hover {
-    border-color: black;
+.dot-link {
+    text-decoration: dotted underline;
+    color: inherit;
+    transition: 200ms;
+}
+
+.dot-link:hover {
+    text-decoration: solid underline;
+}
+
+.q-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .parallax {
-    height: 100vh;
     background-image: url("home-landing-bg.png");
     background-attachment: fixed;
-    background-position: center;
+    background-position: 0% 20%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.v-fill {
+    height: 100vh;
+}
+
+.v-fill-90 {
+    height: 90vh;
+}
+
+.xparent {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.col-invert {
+    color: white;
+    background-color: black;
+}
+
+.bttn.col-invert {
+    color: black;
+    background-color: white;
+}
+
+.bttn.col-invert:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }

@@ -3,8 +3,125 @@
 {% load static %}
 
 {% block style %}
+<style>
+    .navbar.scrolled .hov-link:hover {
+        border-color: black;
+    }
+
+    .navbar.scrolled {
+        color: black;
+    }
+
+    .scrolled .nav-bg-color {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        /* background-image: none; */
+        opacity: 1;
+        color: black;
+        /* transition: 200ms; */
+    }
+
+    .scroll-indicator {
+        position: fixed;
+        /* margin: auto; */
+        bottom: 4%;
+        right: 4%;
+        /* transform: translate(-50%, -50%); */
+
+        transition: opacity 200ms;
+    }
+
+    /* .leftj {
+        width: 60%;
+        padding-left: 10%;
+    }
+
+    .rightj {
+        background-color: black;
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        float: right;
+        text-align: right;
+    } */
+
+    .content-section {
+        display: block;
+        width: 100%;
+        overflow:hidden;
+    }
+
+    .content-section .s-content {
+        width: 50%;
+    }
+    
+    .left-aligned {
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    .right-aligned {
+        display: flex;
+        flex-direction: column;
+        float: right;
+        text-align: right;
+        align-items: end;
+        margin-right: 10%;
+    }
+
+    .content-section .title
+    {
+        display: block;
+        margin-top: 70px;
+        margin-bottom: 20px;
+        /* width: 100%; */
+    }
+
+    .content-section .para
+    {
+        display: block;
+        line-height: 170%;
+    }
+</style>
 {% endblock %}
 
+{% block nav-classes %}nav-lod parallax{% endblock %}
+
 {% block content %}
-<div class="parallax"></div>
+<div class="parallax v-fill-90"></div>
+<div class="scroll-indicator" id="scroll-indicator"><img src="{% static 'down2.png' %}" width="70px" /></div>
+<div class="content-section">
+    <div class="s-content left-aligned">
+        <span class="header-1 title nserif">WELCOME</span>
+        <span class="para serif">Thanks for visiting my website. Below you can find examples of some of the pieces that I have created in the past. I hope you enjoy them! I am available for commissions. Feel free to reach me at: <a href="mailto:susan.kilmartin1@gmail.com" class="dot-link">susan.kilmartin1@gmail.com</a></span>
+        <span class="bttn nserif-heavy"><a href="/about" class="q-link">Learn more</a></span>
+    </div>
+</div>
+<div class="content-section col-invert">
+    <div class="s-content right-aligned">
+        <span class="header-1 title nserif">PORTFOLIO</span>
+        <span class="para serif">My work includes portraits, landscapes, murals, illustrations, and more!<br>I use a variety of ...(todo)</span>
+        <a href="/portfolio" class="q-link"><span class="bttn col-invert nserif-heavy">Portfolio</span></a>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    const nav_bg = document.getElementById('navbar');
+    const scroll_ind = document.getElementById('scroll-indicator');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            // If at the top of the page
+            nav_bg.classList.remove('scrolled');
+            scroll_ind.classList.remove('xparent');
+        } else {
+            // If scrolled down
+            nav_bg.classList.add('scrolled');
+            scroll_ind.classList.add('xparent');
+        }
+    });
+</script>
 {% endblock %}
