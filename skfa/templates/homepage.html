@@ -1,0 +1,22 @@
+{% extends 'templates/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<style>
+    .parallax {
+        height: 500px;
+        background-image: url("{% static 'home-landing-bg.png' %}");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="parallax">
+
+</div>
+{% endblock %}
